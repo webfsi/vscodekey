@@ -31,7 +31,6 @@ _tmp
 node_modules
 psd
 bower_components
-dist
 src/sass/generated
 src/templates/svg
 _sprite.scss
