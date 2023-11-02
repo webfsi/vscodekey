@@ -1,0 +1,2149 @@
+<div class="container">
+	<div class="body-inner">
+		<div class="body-inner__list">
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+					"key": "ctrl+j",
+					"command": "editor.action.joinLines",
+					"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					_Объединить строки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+cmd+.",
+						"command": "editor.action.autoFix",
+						"when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Автоисправление...
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+e",
+						"command": "editor.action.toggleScreenReaderAccessibilityMode",
+						"when": "accessibilityHelpIsShown"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Активация режима специальных возможностей для средства чтения с экрана
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+f1",
+						"command": "editor.action.toggleScreenReaderAccessibilityMode"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Активация режима специальных возможностей для средства чтения с экрана
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+\\",
+						"command": "editor.action.inlineSuggest.trigger",
+						"when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Активировать встроенное предложение
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+v",
+						"command": "notebook.cell.pasteAbove",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Вставить ячейку выше
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+enter",
+						"command": "notebook.cell.insertCodeCellAbove",
+						"when": "notebookCellListFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Вставить ячейку кода выше
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+enter",
+						"command": "notebook.cell.insertCodeCellBelow",
+						"when": "notebookCellListFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Вставить ячейку кода ниже
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+pageup",
+						"command": "notebook.cell.cursorPageUpSelect",
+						"when": "editorTextFocus && inputFocus && notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Выбор страницы вверх от курсора ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+pagedown",
+						"command": "notebook.cell.cursorPageDownSelect",
+						"when": "editorTextFocus && inputFocus && notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Выбор страницы вниз от курсора ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+enter",
+						"command": "notebook.cell.execute",
+						"when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Выполнить ячейку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+enter",
+						"command": "notebook.cell.executeAndInsertBelow",
+						"when": "notebookCellListFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Выполнить ячейку записной книжки и вставить ниже
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+enter",
+						"command": "notebook.cell.executeAndSelectBelow",
+						"when": "notebookCellListFocused && !inlineChatFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Выполнить ячейку записной книжки и выбрать ниже
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "y",
+						"command": "notebook.cell.changeToCode",
+						"when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'markup'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Заменить ячейку на код
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "enter",
+						"command": "notebook.cell.edit",
+						"when": "notebookCellListFocused && notebookEditable && !editorHoverFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Изменить ячейку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "m",
+						"command": "notebook.cell.changeToMarkdown",
+						"when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Изменить ячейку на Markdown
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+up",
+						"command": "notebook.cell.copyUp",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Копировать ячейку вверх
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+down",
+						"command": "notebook.cell.copyDown",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Копировать ячейку вниз
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+shift+alt+j",
+						"command": "notebook.cell.joinAbove",
+						"when": "notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Объединить с предыдущей ячейкой
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+alt+j",
+						"command": "notebook.cell.joinBelow",
+						"when": "notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Объединить со следующей ячейкой
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "escape",
+						"command": "notebook.cell.quitEdit",
+						"when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Остановить редактирование ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+enter",
+						"command": "notebook.cell.quitEdit",
+						"when": "inputFocus && notebookEditorFocused && notebookCellType == 'markup'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Остановить редактирование ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "escape",
+						"command": "notebook.cell.quitEdit",
+						"when": "notebookEditorFocused && notebookOutputFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Остановить редактирование ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+delete",
+						"command": "notebook.cell.clearOutputs",
+						"when": "notebookCellEditable && notebookCellHasOutputs && notebookEditable && notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Очистить выходные данные ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+cmd+down",
+						"command": "notebook.cell.focusInOutput",
+						"when": "notebookCellHasOutputs && notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на выходные данные активной ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "up",
+						"command": "notebook.focusPreviousEditor",
+						"when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на предыдущий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "up",
+						"command": "notebook.focusPreviousEditor",
+						"when": "config.notebook.navigation.allowNavigateToSurroundingCells && notebookCursorNavigationMode && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && !notebookCellMarkdownEditMode && notebookCellType == 'markup'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на предыдущий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "down",
+						"command": "notebook.focusNextEditor",
+						"when": "config.notebook.navigation.allowNavigateToSurroundingCells && inlineChatFocused && inlineChatInnerCursorLast && inputFocus && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на следующий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "down",
+						"command": "notebook.focusNextEditor",
+						"when": "config.notebook.navigation.allowNavigateToSurroundingCells && inlineChatFocused && inlineChatInnerCursorLast && notebookCursorNavigationMode && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && !notebookCellMarkdownEditMode && notebookCellType == 'markup'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на следующий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "down",
+						"command": "notebook.focusNextEditor",
+						"when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на следующий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "down",
+						"command": "notebook.focusNextEditor",
+						"when": "config.notebook.navigation.allowNavigateToSurroundingCells && notebookCursorNavigationMode && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && !notebookCellMarkdownEditMode && notebookCellType == 'markup'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на следующий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+cmd+down",
+						"command": "notebook.focusNextEditor",
+						"when": "notebookEditorFocused && notebookOutputFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Перевести выделение на следующий редактор ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k y",
+						"command": "notebook.cell.toggleOutputScrolling",
+						"when": "notebookCellHasOutputs && notebookCellListFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Переключить вывод ячейки прокрутки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+up",
+						"command": "notebook.cell.moveUp",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Переместить ячейку вверх
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+down",
+						"command": "notebook.cell.moveDown",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Переместить ячейку вниз
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+d",
+						"command": "notebook.cell.detectLanguage",
+						"when": "notebookCellEditable && notebookEditable"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Принять обнаруженный язык для ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k ctrl+shift+alt+cmd+1",
+						"command": "notebook.cell.split",
+						"when": "editorTextFocus && notebookCellEditable && notebookEditable && notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Разбить ячейку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+c",
+						"command": "notebook.cell.expandCellInput",
+						"when": "notebookCellInputIsCollapsed && notebookCellListFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Развернуть ввод в ячейке
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k t",
+						"command": "notebook.cell.expandCellOutput",
+						"when": "notebookCellListFocused && notebookCellOutputIsCollapsed"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Развернуть вывод ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "right",
+						"command": "notebook.unfold",
+						"when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Развернуть ячейку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+l",
+						"command": "notebook.centerActiveCell",
+						"when": "notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Разместить активную ячейку по центру
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+c",
+						"command": "notebook.cell.collapseCellInput",
+						"when": "notebookCellListFocused && !inputFocus && !notebookCellInputIsCollapsed"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Свернуть ввод для ячеек
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k t",
+						"command": "notebook.cell.collapseCellOutput",
+						"when": "notebookCellHasOutputs && notebookCellListFocused && !inputFocus && !notebookCellOutputIsCollapsed"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Свернуть вывод ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "left",
+						"command": "notebook.fold",
+						"when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Свернуть ячейку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+cmd+up",
+						"command": "notebook.cell.focusOutOutput",
+						"when": "notebookEditorFocused && notebookOutputFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Снять выделение с выходных данных активной ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "pageup",
+						"command": "notebook.cell.cursorPageUp",
+						"when": "editorTextFocus && inputFocus && notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Страница вверх от курсора ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "pagedown",
+						"command": "notebook.cell.cursorPageDown",
+						"when": "editorTextFocus && inputFocus && notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Страница вниз от курсора ячейки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+backspace",
+						"command": "notebook.cell.delete",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Удалить ячейку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+up",
+						"command": "notebook.focusTop",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Фокус на первой ячейке
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+down",
+						"command": "notebook.focusBottom",
+						"when": "notebookEditorFocused && !inputFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Фокус на последней ячейке
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+f",
+						"command": "notebook.format",
+						"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Блокнот: Форматирование записной книжки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+[Slash]",
+						"command": "editor.action.quickFix",
+						"when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Быстрое исправление...
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+z",
+						"command": "redo"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вернуть
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+z",
+						"command": "editor.action.toggleWordWrap"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вид: переключение режима переноса по словам
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+v",
+						"command": "editor.action.clipboardPasteAction"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вставить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+enter",
+						"command": "editor.action.insertLineBefore",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вставить строку выше
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+enter",
+						"command": "editor.action.insertLineAfter",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вставить строку ниже
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "enter",
+						"command": "editor.action.insertColorWithStandaloneColorPicker",
+						"when": "standaloneColorPickerFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вставка цвета с помощью автономной палитры цветов
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k i",
+						"command": "inlineChat.start",
+						"when": "inlineChatHasProvider && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Встроенный чат: Начать чат с кодом
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+i",
+						"command": "inlineChat.start",
+						"when": "inlineChatHasProvider && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Встроенный чат: Начать чат с кодом
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "escape",
+						"command": "interactive.acceptChanges",
+						"when": "inlineChatHasProvider && inlineChatUserDidEdit && inlineChatVisible && !inlineChatDocumentChanged || inlineChatHasProvider && inlineChatUserDidEdit && inlineChatVisible && config.inlineChat.editMode != 'preview'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Встроенный чат: Принять изменения
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+enter",
+						"command": "interactive.acceptChanges",
+						"when": "inlineChatHasProvider && inlineChatVisible && !inlineChatDocumentChanged || inlineChatHasProvider && inlineChatVisible && config.inlineChat.editMode != 'preview'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Встроенный чат: Принять изменения
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "down",
+						"command": "inlineChat.focus",
+						"when": "editorTextFocus && inlineChatVisible && !accessibilityModeEnabled && !inlineChatFocused && !isEmbeddedDiffEditor && inlineChatOuterCursorPosition == 'above'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Встроенный чат: Фокус на входных данных
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "up",
+						"command": "inlineChat.focus",
+						"when": "editorTextFocus && inlineChatVisible && !accessibilityModeEnabled && !inlineChatFocused && !isEmbeddedDiffEditor && inlineChatOuterCursorPosition == 'below'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Встроенный чат: Фокус на входных данных
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+a",
+						"command": "editor.action.selectAll"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Выбрать все
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+l",
+						"command": "editor.action.selectHighlights",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Выбрать все вхождения найденных совпадений
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+p",
+						"command": "workbench.action.quickOpenSelectPrevious",
+						"when": "inQuickOpen"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Выбрать предыдущее в Quick Open
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+n",
+						"command": "workbench.action.quickOpenSelectNext",
+						"when": "inQuickOpen"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Выбрать следующее в Quick Open
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+k",
+						"command": "editor.action.selectFromAnchorToCursor",
+						"when": "editorTextFocus && selectionAnchorSet"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Выделить текст от начальной точки выделения до курсора
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+x",
+						"command": "editor.action.clipboardCutAction"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Вырезать
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+shift+-",
+						"command": "workbench.action.navigateForward",
+						"when": "canNavigateForward"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Далее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+d",
+						"command": "editor.action.addSelectionToNextFindMatch",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Добавить выделение в следующее найденное совпадение
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+cmd+up",
+						"command": "editor.action.insertCursorAbove",
+						"when": "editorTextFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Добавить курсор выше
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+cmd+down",
+						"command": "editor.action.insertCursorBelow",
+						"when": "editorTextFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Добавить курсор ниже
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+i",
+						"command": "editor.action.insertCursorAtEndOfEachLineSelected",
+						"when": "editorTextFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Добавить курсоры к окончаниям строк
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+f7",
+						"command": "editor.action.accessibleDiffViewer.prev",
+						"when": "isInDiffEditor"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Доступное представление различий: Перейти к предыдущему различию
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "f7",
+						"command": "editor.action.accessibleDiffViewer.next",
+						"when": "isInDiffEditor"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Доступное представление различий: Перейти к следующему различию
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+d",
+						"command": "editor.action.duplicateSelection"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Дублировать выбранное
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+b",
+						"command": "workbench.action.tasks.build",
+						"when": "taskCommandsRegistered"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Задачи: Выполнить задачу сборки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+7",
+						"command": "editor.action.blockComment",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Закомментировать или раскомментировать блок
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+[IntlBackslash]",
+						"command": "editor.action.commentLine",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Закомментировать или раскомментировать строку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+c",
+						"command": "editor.action.addCommentLine",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Закомментировать строку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "escape",
+						"command": "editor.debug.action.closeExceptionWidget",
+						"when": "exceptionWidgetVisible"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Закрыть мини-приложение исключений
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+w",
+						"command": "workbench.action.closeWindow"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Закрыть окно
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+w",
+						"command": "workbench.action.closeWindow",
+						"when": "!editorIsOpen && !multipleEditorGroups"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Закрыть окно
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+cmd+f",
+						"command": "editor.action.startFindReplaceAction",
+						"when": "editorFocus || editorIsOpen"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Заменить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+shift+alt+cmd+[Comma]",
+						"command": "editor.action.inPlaceReplace.up",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Заменить предыдущим значением
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+shift+alt+cmd+[Period]",
+						"command": "editor.action.inPlaceReplace.down",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Заменить следующим значением
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+f2",
+						"command": "editor.action.linkedEditing",
+						"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Запустить связанное редактирование
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+f2",
+						"command": "editor.action.changeAll",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Изменить все вхождения
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k m",
+						"command": "workbench.action.editor.changeLanguageMode",
+						"when": "!notebookEditorFocused"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Изменить языковой режим
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+c",
+						"command": "editor.action.clipboardCopyAction"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Копирование
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+cmd+v",
+						"command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Копировать с выделением синтаксиса
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+up",
+						"command": "editor.action.copyLinesUpAction",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Копировать строку сверху
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+down",
+						"command": "editor.action.copyLinesDownAction",
+						"when": "editorTextFocus && !editorReadonly"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Копировать строку снизу
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+-",
+						"command": "workbench.action.navigateBack",
+						"when": "canNavigateBack"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Назад
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+f",
+						"command": "actions.find",
+						"when": "editorFocus || editorIsOpen"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+e",
+						"command": "actions.findWithSelection"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти в выбранном
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "f3",
+						"command": "editor.action.nextMatchFindAction",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти далее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+g",
+						"command": "editor.action.nextMatchFindAction",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти далее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "enter",
+						"command": "editor.action.nextMatchFindAction",
+						"when": "editorFocus && findInputFocussed"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти далее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+f3",
+						"command": "editor.action.previousSelectionMatchFindAction",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти предыдущее выделение
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+f3",
+						"command": "editor.action.previousMatchFindAction",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти ранее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+g",
+						"command": "editor.action.previousMatchFindAction",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти ранее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+enter",
+						"command": "editor.action.previousMatchFindAction",
+						"when": "editorFocus && findInputFocussed"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти ранее
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+f3",
+						"command": "editor.action.nextSelectionMatchFindAction",
+						"when": "editorFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Найти следующее выделение
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+n",
+						"command": "workbench.action.newWindow"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Новое окно
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+k",
+						"command": "editor.action.defineKeybinding",
+						"when": "resource == 'vscode-userdata:/Users/fs/Library/Application%20Support/Code/User/keybindings.json'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Определить назначение клавиш
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+d",
+						"command": "editor.detectLanguage",
+						"when": "editorTextFocus && !notebookEditable"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Определить язык из Содержимого
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+alt+o",
+						"command": "editor.action.organizeImports",
+						"when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Организация импортов
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "escape",
+						"command": "inlayHints.stopReadingLineWithHint",
+						"when": "isReadingLineWithInlayHints"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Остановить чтение встроенных подсказок.
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+f6",
+						"command": "editor.action.accessibleViewDisableHint",
+						"when": "accessibilityHelpIsShown && accessibleViewVerbosityEnabled || accessibleViewIsShown && accessibleViewVerbosityEnabled"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отключить указание для представления с поддержкой специальных возможностей
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+c",
+						"command": "workbench.action.terminal.openNativeConsole",
+						"when": "!terminalFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Открыть новый внешний терминал
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k f12",
+						"command": "editor.action.revealDefinitionAside",
+						"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Открыть определение сбоку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+f12",
+						"command": "editor.action.revealDefinitionAside",
+						"when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Открыть определение сбоку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+f2",
+						"command": "editor.action.accessibleView"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Открыть представление с поддержкой специальных возможностей
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "alt+f1",
+						"command": "editor.action.accessibilityHelp"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Открыть справку по специальным возможностям
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+f9",
+						"command": "editor.debug.action.toggleInlineBreakpoint",
+						"when": "editorTextFocus"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Внутренняя точка останова
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+f11",
+						"command": "workbench.action.debug.stepIntoTarget",
+						"when": "inDebugMode && stepIntoTargetsSupported && debugState == 'stopped'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Выполнять цель по шагам
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "ctrl+f5",
+						"command": "workbench.action.debug.run",
+						"when": "debuggersAvailable && debugState != 'initializing'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Начать без отладки
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "f5",
+						"command": "workbench.action.debug.start",
+						"when": "debuggersAvailable && debugState == 'inactive'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Начать отладку
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+f5",
+						"command": "workbench.action.debug.stop",
+						"when": "inDebugMode && !focusedSessionIsAttach"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Остановить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+f5",
+						"command": "workbench.action.debug.disconnect",
+						"when": "focusedSessionIsAttach && inDebugMode"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Отключить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "shift+cmd+f5",
+						"command": "workbench.action.debug.restart",
+						"when": "inDebugMode"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Перезапустить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "cmd+k cmd+i",
+						"command": "editor.debug.action.showDebugHover",
+						"when": "editorTextFocus && inDebugMode"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: показать при наведении
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "f6",
+						"command": "workbench.action.debug.pause",
+						"when": "debugState == 'running'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Приостановить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					{
+						"key": "f5",
+						"command": "workbench.action.debug.continue",
+						"when": "debugState == 'stopped'"
+					}
+				</div>
+				<div class="body-inner__desc">
+					Отладка: Продолжить
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+			<div class="body-inner__item">
+				<div class="body-inner__key">
+					SSSSSSSSS
+				</div>
+				<div class="body-inner__desc">
+					SSSSSSSSSS
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
