@@ -37,6 +37,28 @@
     </script>
   </head>
   <body data-page-name="articlePage">
+    <script>
+      function handleFirstVisit()
+      {
+        const hasVisited = localStorage.getItem('visited');
+        if (hasVisited)
+        {
+          document.body.classList.add('user-visited');
+          const hiidenBlockFind = document.querySelector('[data-enter-page-first]');
+          if (hiidenBlockFind)
+          {
+            const hiddenBlock = hiidenBlockFind.querySelector('.hub_two');
+            hiddenBlock.style.display = 'none';
+          }
+        }
+        else
+        {
+          localStorage.setItem('visited', 'true');
+        }
+      }
+      handleFirstVisit();
+
+    </script>
     <header class="header cnn-bar" id="cnn-bar">
       <div class="cnn-bar__row cnn-bar__row--black">
         <a class="cnn-bar__back-link" href="https://edition.cnn.com">Back to CNN</a>
@@ -104,7 +126,33 @@
           <span></span><span></span>
         </button>
       </div>
-      <div class="container-hub__list">
+      <div class="container-hub__list" data-enter-page-first>
+        <div class="hub hub_two is-active is-current">
+          <div class="hub__wrp">
+            <div class="hub__video bg-bl" style="background-image: url(img/img-user-visited-not.jpg);">
+              <video class="hero-video full-screen" autoplay muted playsinline>
+                <source src="https://player.vimeo.com/progressive_redirect/playback/873949025/rendition/720p/file.mp4?loc=external&signature=d9c25bebe3c81e42e93f349b6a281820ec65c47599d10fc9bb4133d786d70faf" type="video/mp4">
+              </video>
+            </div>
+            <div class="hub__content">
+              <div class="hub__btn-left">
+                <button class="btn-border" data-video-skip> Skip intro </button>
+              </div>
+              <div class="hub__btn-right">
+                <div class="play-btn btn-sound btn-play_sm" data-video-sound>
+                  <span class="btn-sound__icon-on">
+                    <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M22.252.366a1.25 1.25 0 00-1.768 1.768 10.244 10.244 0 010 14.485 1.25 1.25 0 001.768 1.768 12.744 12.744 0 000-18.02zm-4.058 4.058a1.25 1.25 0 10-1.768 1.767 4.497 4.497 0 010 6.36 1.25 1.25 0 101.768 1.767 6.997 6.997 0 000-9.894zm-4.85-3.093a1.25 1.25 0 00-2.03-.977L5.909 4.678H1.75c-.69 0-1.25.56-1.25 1.25v6.897c0 .69.56 1.25 1.25 1.25h4.16l5.404 4.323a1.25 1.25 0 002.03-.976V1.331zM7.13 6.904l3.716-2.973v10.89L7.129 11.85a1.25 1.25 0 00-.781-.274H3V7.178h3.348c.284 0 .559-.096.78-.274z" fill="#23196E" /></svg>
+                  </span>
+                  <span class="btn-sound__icon-off">
+                    <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.491.123c.433.209.709.647.709 1.127v15.647a1.25 1.25 0 01-2.031.976l-5.246-4.196H1.89c-.69 0-1.25-.56-1.25-1.25V5.72c0-.69.56-1.25 1.25-1.25h4.032L11.169.274c.375-.3.889-.359 1.322-.15zM10.7 3.851L7.142 6.697a1.25 1.25 0 01-.78.274H3.14v4.206h3.22c.284 0 .56.096.781.274l3.558 2.846V3.85zm15.546.987a1.25 1.25 0 010 1.767l-2.47 2.47 2.47 2.469a1.25 1.25 0 01-1.768 1.767l-2.47-2.469-2.468 2.47a1.25 1.25 0 11-1.768-1.768l2.469-2.47-2.47-2.469a1.25 1.25 0 111.769-1.767l2.469 2.469 2.469-2.47a1.25 1.25 0 011.768 0z" fill="#23196E" /></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="b-menu" data-menu-hover data-close-burger>
           <div class="bg-tranlate-to-inner">
             <span class="bg-tranlate-to-inner__one"></span>
@@ -114,10 +162,10 @@
           <div class="b-menu__wrp">
             <div class="b-menu__imgs">
               <div class="b-menu__img" data-menu-hover-img>
-                <img src="img/burger/2.jpg" alt="image">
+                <img src="img/burger/1.jpg" alt="image">
               </div>
               <div class="b-menu__img" data-menu-hover-img>
-                <img src="img/burger/1.jpg" alt="image">
+                <img src="img/burger/2.jpg" alt="image">
               </div>
               <div class="b-menu__img" data-menu-hover-img>
                 <img src="img/burger/3.jpg" alt="image">
@@ -165,7 +213,7 @@
                 <video class="hero-video full-screen is-play-video" autoplay muted loop playisline playsinlineposter="your-poster-image.jpg" data-video-click-stop>
                   <source src="https://player.vimeo.com/progressive_redirect/playback/873949158/rendition/720p/file.mp4?loc=external&signature=c183f55f3d02c04e73ff1a9ce1275bf45d22bd6148730dd56d9f12a4cdb2d9c4" type="video/mp4">
                 </video>
-                <video class="hero-video full-screen is-paused-video" muted controls loop playisline playsinlineposter="your-poster-image.jpg" data-video-click-play>
+                <video class="hero-video full-screen is-paused-video" autoplay muted controls loop playisline playsinlineposter="your-poster-image.jpg" data-video-click-play>
                   <source data-src="https://player.vimeo.com/progressive_redirect/playback/873949131/rendition/720p/file.mp4?loc=external&signature=4e6fa751340ecdd600820d0a84435141fc3e47b50da6b186578ae09daaa7f76d" type="video/mp4">
                 </video>
               </div>
